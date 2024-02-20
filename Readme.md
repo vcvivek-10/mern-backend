@@ -12,7 +12,7 @@ git ignore generator use for the create specific application gitignore file like
 
 create file inside src folder using command line or gitbash with the help of touch command :-
 
-1. cd src - ls - touch app.js constants.js index.js
+cd src - ls - touch app.js constants.js index.js
 
 then come to the package json file for how to work our app :-
 
@@ -26,9 +26,41 @@ we use module js for importing :- use below description
 
 whenever server reload or save file then we need to sart or stop each time for auto handle we use nodemon
 it is dev dependancy so only devloper can use it will not gone to production for that use
+and for formatting use prittier to well orgnixe code with teamate for less conflict while merge or push or pull time
 
 npm i --save-dev nodemon or npm i -D nodemon
+npm i -D prettier
+
+1.create prettier file with rc extension for apply it to our code formating
+
+.prettierrc file create, inside file
+{
+"singleQuote": false,
+"bracketSpacing": true,
+"tabWidth": 4,
+"semi": true,
+"trailingComma": "es5"
+}
+
+2. create prettier ignore file for igonre to where prettier will not work
+   \*.env
+   .env
+   /.vscode
+   /node_modules
+   ./dist
+
+.prettierignore file create, inside file
 
 inside script to start the server :-
 
 "dev" : "nodemon src/index.js"
+
+create folder inside src :-
+inside controllers they contain main functionality
+db for database connection
+middleware code will run inbetween before sending request server to check the condition that fulfill
+models for create the structure of data base how to store data to db
+routes for going separate pages
+utils for utilitise the component will multiple time
+
+cd src - ls - mkdir controllers db middlewares models routes utils
