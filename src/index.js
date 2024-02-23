@@ -1,6 +1,9 @@
 // require('dotenv').config({ path: "./env" })
 import dotenv from "dotenv"
 import connectDB from "./db/index.js";
+import express from "express"
+
+const app = express()
 
 dotenv.config({
     path: './.env'
@@ -8,6 +11,18 @@ dotenv.config({
 
 //  2nd way 
 connectDB()
+    .then(() => {
+        app.listen(process.env.PORT || 8000, () => {
+            console.log(`App is listing on port ${process.env.PORT}`);
+        })
+        app.on("error", (error) => {
+            console.log("Error", error);
+            throw error
+        })
+    })
+    .catch((error) => {
+        console.log("MONODB db connection failed !! ", error);
+    })
 
 
 

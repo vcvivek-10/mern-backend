@@ -94,3 +94,9 @@ express :- for listen app
 when you try to connect db then
 1.wrap it into Try Catch block or Promises
 2.db is always in another quantinant
+
+install coockie-parser for store coockies to user side safely
+install cors for cros origin resoureces purpose give the access to site to visit site
+
+_imp_ :-
+whenever use middleware or configure setting then we have to use with app.use(middleware)
