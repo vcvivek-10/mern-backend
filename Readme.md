@@ -100,3 +100,24 @@ install cors for cros origin resoureces purpose give the access to site to visit
 
 _imp_ :-
 whenever use middleware or configure setting then we have to use with app.use(middleware)
+
+user and video model with hooks and jwt
+BSON data format :-
+BSON, or Binary JSON, is the data format that MongoDB uses to organize and store data. This data format includes all JSON data structure types and adds support for types including dates, different size integers, ObjectIds, and binary data.
+
+in user schema index true will help form searching in db
+
+mongoose-aggrigation-paginate-v2 package use for aggrigation quries like insert Many one and etc
+use this before exporting it is plugin and that use in video model.js
+
+install bcrypt only for sequre hash password store in db with string
+
+jwt :- json web token install
+it is a bearer token like who have this token i will send data
+
+pre:-
+mongoose pre hook use for when user want to save then inside middleware or controller just before save we can define pre from encryption
+and use function as a callback for getting this object values instead of use arrow function
+
+use access token and refresh token in env create with online jwt generator any, and access token have less days to expire like 1d but refresh token have high days like 10d
+and refresh token will save on db but acces token will not
